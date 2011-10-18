@@ -1,7 +1,6 @@
 require "gnip-stream/version"
 
-module Gnip
-  module Stream
-    # Your code goes here...
-  end
+require 'gnip-stream/json_stream'
+
+module GnipStream
 end

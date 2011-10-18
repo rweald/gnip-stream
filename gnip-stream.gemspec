@@ -4,7 +4,7 @@ require "gnip-stream/version"
 
 Gem::Specification.new do |s|
   s.name        = "gnip-stream"
-  s.version     = Gnip::Stream::VERSION
+  s.version     = GnipStream::VERSION
   s.authors     = ["Ryan Weald"]
   s.email       = ["ryan@weald.com"]
   s.homepage    = "https://github.com/rweald/gnip-stream"
