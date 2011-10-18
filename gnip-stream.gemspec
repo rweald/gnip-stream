@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Gnip::Stream::VERSION
   s.authors     = ["Ryan Weald"]
   s.email       = ["ryan@weald.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/rweald/gnip-stream"
+  s.summary     = %q{}
+  s.description = %q{}
 
   s.rubyforge_project = "gnip-stream"
 
