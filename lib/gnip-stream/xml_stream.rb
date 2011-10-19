@@ -1,3 +1,4 @@
+require 'gnip-stream/stream_delegate'
 module GnipStream
   class XmlStream
     include StreamDelegate
