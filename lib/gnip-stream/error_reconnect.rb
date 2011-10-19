@@ -1,13 +1,13 @@
 module GnipStream
   class ErrorReconnect
-    def initialize(source_class, method_name, error_message)
+    def initialize(source_class, method_name)
       @source_class = source_class
       @method_name = method_name
-      @error_message = error_message
       @reconnect_attempts = 0
     end
 
-    def attempt_to_reconnect
+    def attempt_to_reconnect(error_message)
+      @error_message = error_message
       if @reconnect_attempts < 5
         sleep(2)
         @source_class.send(@method_name)
