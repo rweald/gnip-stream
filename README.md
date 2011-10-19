@@ -39,6 +39,6 @@ end
 * [Sharethrough Team](https://github.com/sharethrough)
 
 ##License
-See this code is licensed under MIT license. See [LICENSE](https://github.com/rweald/gnip-stream/blob/master/LICENSE) file for more details.
+MIT. See [LICENSE](https://github.com/rweald/gnip-stream/blob/master/LICENSE) file for more details.
 
 Special thanks to [Sharethrough](http://www.sharethrough.com/)
