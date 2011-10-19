@@ -32,6 +32,11 @@ facebook_stream.consume do |message|
 end
 ```
 
+##Contributors
+
+* [Ryan Weald](https://github.com/rweald)
+* Sharethrough Team
+
 ##License
 See this code is licensed under MIT license. See [LICENSE](https://github.com/rweald/gnip-stream/blob/master/LICENSE) file for more details.
 
