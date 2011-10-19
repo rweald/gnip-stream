@@ -33,7 +33,7 @@ module GnipStream
           EM.stop
         }
         http.errback { 
-          handle_error(http.error)
+          handle_error(http)
           EM.stop
         }
       end
