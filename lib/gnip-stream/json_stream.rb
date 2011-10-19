@@ -5,7 +5,7 @@ module GnipStream
     include StreamDelegate
     def initialize(url, headers={})
       json_processor = DataBuffer.new(Regexp.new(/^(\{.*\})\s\s(.*)/))
-      @_stream = Stream.new(url, json_processor, headers)
+      @stream = Stream.new(url, json_processor, headers)
     end
   end
 end
