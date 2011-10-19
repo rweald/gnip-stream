@@ -1,3 +1,5 @@
+require 'gnip-stream/xml_stream'
+
 module GnipStream
   class FacebookClient
     def initialize(url, username, password)
