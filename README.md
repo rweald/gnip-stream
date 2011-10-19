@@ -31,3 +31,8 @@ facebook_stream.consume do |message|
   puts message
 end
 ```
+
+##License
+See this code is licensed under MIT license. See LICENSE file for more details.
+
+Special thanks to [Sharethrough](http://www.sharethrough.com/)
