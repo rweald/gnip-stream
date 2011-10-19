@@ -5,7 +5,7 @@ describe GnipStream::XmlStream do
   subject { GnipStream::XmlStream.new("http://example.com") }
   describe "#initialize" do
     it "creates underlying stream object with a json specific data buffer" do
-      GnipStream::Stream.should_receive(:new) do |url|
+      GnipStream::Stream.should_receive(:new) do |url, processor, headers|
         url.should == "http://example.com"
       end
       GnipStream::XmlStream.new("http://example.com")
