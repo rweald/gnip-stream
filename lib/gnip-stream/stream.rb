@@ -9,7 +9,6 @@ module GnipStream
     def initialize(url, processor, headers={})
       @url = url
       @headers = headers
-      @error_handler = Object.new
       @processor = processor
     end
 
