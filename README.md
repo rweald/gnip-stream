@@ -33,6 +33,6 @@ end
 ```
 
 ##License
-See this code is licensed under MIT license. See LICENSE file for more details.
+See this code is licensed under MIT license. See [LICENSE](https://github.com/rweald/gnip-stream/blob/master/LICENSE) file for more details.
 
 Special thanks to [Sharethrough](http://www.sharethrough.com/)
