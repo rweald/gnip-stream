@@ -23,5 +23,6 @@ module GnipStream
       @stream.url = @authentication.location
       @stream.headers = {"cookie" => @authentication.cookies}
     end
+
   end
 end
