@@ -25,7 +25,7 @@ module GnipStream
     end
 
     def connect
-      http = EM::HttpRequest.new(@url).get :inactivity_timeout => 0, :headers => @headers
+      http = EM::HttpRequest.new(@url).get :inactivity_timeout => 0, :head => @headers
       http.chunk { |chunk| process_chunk(chunk) }
       http.callback { handle_connection_close(http) }
       http.errback { handle_error(http) }
