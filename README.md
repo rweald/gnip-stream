@@ -18,10 +18,16 @@ gem 'gnip-stream'
 ```ruby
 require 'gnip-stream'
 
-twitter_stream = GnipStream::Powertrack.new(:url => "http://yourstreamingurl.gnip.com", 
-                                            :username => "someuser", :password => "password")
-twitter_stream.on_message do |message|
+#To connect to the special twitter powertrack api
+twitter_stream = GnipStream::PowertrackClient.new("http://yourstreamingurl.gnip.com", "someuser", "password")
+twitter_stream.consume do |message|
   #process the message however you want
+  puts message
+end
+
+#To Connect to the Facebook API
+facebook_stream = GnipStream::FacebookClient.new("http://yourstreamingurl.gnip.com", "someuser", "password")
+facebook_stream.consume do |message|
   puts message
 end
 ```
