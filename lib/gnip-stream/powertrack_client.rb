@@ -1,3 +1,4 @@
+require 'gnip-stream/powertrack_authentication'
 module GnipStream
   class PowertrackClient
     def initialize(url, username, password)
@@ -19,7 +20,7 @@ module GnipStream
 
     def authenticate
       @authentication.authenticate
-      @stream.url = @authentication.url
+      @stream.url = @authentication.location
       @stream.headers = {"cookie" => @authentication.cookies}
     end
   end

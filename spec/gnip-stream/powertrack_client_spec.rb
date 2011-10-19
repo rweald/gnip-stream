@@ -34,7 +34,7 @@ describe GnipStream::PowertrackClient do
   describe "#authenticate" do
     it "performs the necessary authentication and passes appropriate credentials to stream" do
       fake_auth.should_receive(:authenticate)
-      fake_auth.should_receive(:url).and_return("http://example.com")
+      fake_auth.should_receive(:location).and_return("http://example.com")
       fake_auth.should_receive(:cookies).and_return("some cookie")
 
       fake_stream.should_receive(:url=).with("http://example.com") 
