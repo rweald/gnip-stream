@@ -10,7 +10,7 @@ Installing gnip-stream is easy. Simply add the following line to your
 ```Gemfile```:
 
 ```ruby
-gem 'gnip-stream'
+gem 'gnip-stream', :git => "https://github.com/rweald/gnip-stream"
 ```
 
 ##Simple Usage
