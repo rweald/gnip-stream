@@ -1,4 +1,5 @@
 # gnip-stream
+[![Build Status](https://secure.travis-ci.org/rweald/gnip-stream.png)](http://travis-ci.org/rweald/gnip-stream)
 
 gnip-stream is a ruby library to connect and stream data from [GNIP](http://gnip.com/).
 It utilizes EventMachine and threads under the hood to provide a true streaming
