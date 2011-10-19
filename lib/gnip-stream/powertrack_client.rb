@@ -8,7 +8,7 @@ module GnipStream
     end
 
     def configure_handlers
-      @stream.on_error { |error| raise "Gnip Connection Error. Reason was: #{error}" }
+      @stream.on_error { |error| raise "Gnip Connection Error. Reason was: #{error.inspect}" }
       @stream.on_connection_close { raise "Gnip Connection Closed" }
     end
 
