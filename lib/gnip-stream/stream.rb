@@ -26,6 +26,7 @@ module GnipStream
 
     def connect
       EM.run do
+        EM.threadpool_size = 5
         http = EM::HttpRequest.new(@url, :inactivity_timeout => 0).get(:head => @headers)
         http.stream { |chunk| process_chunk(chunk) }
         http.callback { 
