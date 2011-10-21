@@ -21,5 +21,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec"
 
   s.add_dependency "em-http-request", ">= 1.0.0"
-  s.add_dependency "yajl-ruby", "~> 1.0.0"
 end
