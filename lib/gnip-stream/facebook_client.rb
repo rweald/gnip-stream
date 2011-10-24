@@ -15,7 +15,8 @@ module GnipStream
     end
 
     def consume(&block)
-      @stream.on_message(&block)
+      @client_callback = block if block
+      @stream.on_message(&@client_callback)
       @stream.connect
     end
   end
