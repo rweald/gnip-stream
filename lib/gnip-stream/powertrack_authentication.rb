@@ -22,6 +22,8 @@ module GnipStream
     def parse_response_header(header)
       @location = header["LOCATION"]
       @cookies = (header["SET_COOKIE"].first.split(";")[0..2].join(";"))
+    rescue => e
+      raise "Gnip Authentication Failed. Reason was #{e.inspect}"
     end
   end
 end
