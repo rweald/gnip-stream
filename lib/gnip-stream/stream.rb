@@ -3,6 +3,8 @@ require 'em-http-request'
 
 module GnipStream
   class Stream
+    
+    EventMachine.threadpool_size = 3
 
     attr_accessor :headers, :options, :url, :username, :password
 
