@@ -1,4 +1,3 @@
-require 'gnip-stream/powertrack_authentication'
 module GnipStream
   class PowertrackClient
     def initialize(url, username, password)
