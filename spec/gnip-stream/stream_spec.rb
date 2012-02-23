@@ -60,7 +60,7 @@ describe GnipStream::Stream do
     let(:fake_http_request) { double("Fake HttpRequest").as_null_object }
     
     it "creates a new EM:HttpRequest get request." do
-      EM::HttpRequest.should_receive(:new) do |url|
+      EM::HttpRequest.should_receive(:new) do |url, _|
         url.should == "http://example.com"
         EM.stop
         fake_http_request
