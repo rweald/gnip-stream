@@ -55,5 +55,30 @@ describe GnipStream::Stream do
       subject.process_chunk("hello")
     end
   end
+
+  describe "#connect" do
+    let(:fake_http_request) { double("Fake HttpRequest").as_null_object }
+    
+    it "creates a new EM:HttpRequest get request." do
+      EM::HttpRequest.should_receive(:new) do |url|
+        url.should == "http://example.com"
+        EM.stop
+        fake_http_request
+      end
+      subject.connect
+    end
+
+    it "Does not have EM::HttpRequest automatically decompress the response." do
+      EM::HttpRequest.should_receive(:new) do
+        EM.stop
+        fake_http_request        
+      end
+      fake_http_request.should_receive(:get) do |arguments|
+        arguments[:decoding].should be_false
+        double().as_null_object
+      end
+      subject.connect
+    end
+  end
   
 end
