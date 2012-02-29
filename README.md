@@ -14,6 +14,12 @@ Installing gnip-stream is easy. Simply add the following line to your
 gem 'gnip-stream', :git => "https://github.com/rweald/gnip-stream"
 ```
 
+##Warning
+This gem currently only supports the old version of the gnip powertrack stream. 
+Work is in progress to update this gem to support the new gzipped powertrack stream. However, 
+due to limitations in Ruby's gzip support the core is having to be re-written to use 
+[curb](https://github.com/taf2/curb) rather than eventmachine
+
 ##Simple Usage
 
 ```ruby
