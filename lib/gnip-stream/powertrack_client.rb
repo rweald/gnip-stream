@@ -1,9 +1,7 @@
-require 'gnip-stream/powertrack_authentication'
 module GnipStream
   class PowertrackClient
     def initialize(url, username, password)
-      @authentication = PowertrackAuthentication.new(url, username, password)
-      @stream = JsonStream.new(url)
+      @stream = JsonStream.new(url, {'authorization' => [username, password], 'accept-encoding' => 'gzip, compressed'})
       @error_handler = ErrorReconnect.new(self, :consume)
       @connection_close_handler = ErrorReconnect.new(self, :consume)
       configure_handlers
@@ -17,15 +15,7 @@ module GnipStream
     def consume(&block)
       @client_callback = block if block
       @stream.on_message(&@client_callback)
-      authenticate
       @stream.connect
     end
-
-    def authenticate
-      @authentication.authenticate
-      @stream.url = @authentication.location
-      @stream.headers = {"cookie" => @authentication.cookies}
-    end
-
   end
 end
