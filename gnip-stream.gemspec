@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Ryan Weald"]
   s.email       = ["ryan@weald.com"]
   s.homepage    = "https://github.com/rweald/gnip-stream"
-  s.summary     = %q{}
+  s.summary     = "A library to connect and stream data from the GNIP streaming API"
   s.description = %q{}
 
   s.rubyforge_project = "gnip-stream"
@@ -16,9 +16,9 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  s.require_paths = ["lib", "vendor"]
 
   s.add_development_dependency "rspec"
 
-  s.add_dependency "em-http-request", ">= 1.0.0"
+  s.add_dependency "em-http-request", ">= 1.0.3"
 end
