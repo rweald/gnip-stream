@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/rweald/gnip-stream"
   s.summary     = "A library to connect and stream data from the GNIP streaming API"
   s.description = %q{}
+  s.license = "MIT"
 
   s.rubyforge_project = "gnip-stream"
 
