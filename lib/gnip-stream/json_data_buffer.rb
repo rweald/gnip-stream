@@ -16,7 +16,7 @@ module GnipStream
       while @buffer =~ check_pattern
         activities = @buffer.split(split_pattern)
         entries << activities.shift
-        @buffer = activities.join('')
+        @buffer = activities.join(split_pattern)
       end
 
       entries
