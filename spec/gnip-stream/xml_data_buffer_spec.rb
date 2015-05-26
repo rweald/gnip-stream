@@ -1,12 +1,12 @@
 require 'spec_helper'
-require 'gnip-stream/data_buffer'
+require 'gnip-stream/xml_data_buffer'
 
-describe GnipStream::DataBuffer do
-  subject { GnipStream::DataBuffer.new(/(test)(.*)/) }
+describe GnipStream::XmlDataBuffer do
+  subject { GnipStream::XmlDataBuffer.new(/(test)(.*)/) }
   describe "#initialize" do
     it "accepts a regex pattern that will be used to match complete entries" do
       pattern = Regexp.new(/hello/)
-      GnipStream::DataBuffer.new(pattern).pattern.should == pattern
+      GnipStream::XmlDataBuffer.new(pattern).pattern.should == pattern
     end
   end
 

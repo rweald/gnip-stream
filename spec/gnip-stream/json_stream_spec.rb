@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'gnip-stream/json_stream'
+require 'gnip-stream/json_data_buffer'
 
 describe GnipStream::JsonStream do
   subject { GnipStream::JsonStream.new("http://example.com") }

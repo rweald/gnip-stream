@@ -1,5 +1,5 @@
 module GnipStream
-  class DataBuffer 
+  class XmlDataBuffer 
     attr_accessor :pattern
     def initialize(pattern)
       @pattern = pattern
