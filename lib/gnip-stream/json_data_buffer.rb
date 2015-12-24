@@ -1,8 +1,9 @@
 module GnipStream
   class JsonDataBuffer 
-    attr_accessor :split_pattern
-    def initialize(split_pattern)
+    attr_accessor :split_pattern, :check_pattern
+    def initialize(split_pattern, check_pattern)
       @split_pattern = split_pattern
+      @check_pattern = check_pattern
       @buffer = ""
     end
 
@@ -12,8 +13,8 @@ module GnipStream
 
     def complete_entries
       entries = []
-      while line = @buffer.slice!(split_pattern)
-        entries << line
+      while line = @buffer.slice!(check_pattern)
+        entries << line.gsub(split_pattern, "")
       end
       entries
     end
