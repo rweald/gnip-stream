@@ -7,8 +7,7 @@ experience without you having to worry about writing non blocking code.
 
 ##Installation
 
-Installing gnip-stream is easy. Simply add the following line to your
-```Gemfile```:
+Installing gnip-stream is easy. Simply add the following line to your `Gemfile`:
 
 ```ruby
 gem 'gnip-stream', :git => "https://github.com/rweald/gnip-stream"
