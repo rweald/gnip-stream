@@ -13,12 +13,9 @@ module GnipStream
 
     def complete_entries
       entries = []
-      while @buffer =~ check_pattern
-        activities = @buffer.split(split_pattern)
-        entries << activities.shift
-        @buffer = activities.join(split_pattern)
+      while line = @buffer.slice!(check_pattern)
+        entries << line.gsub(split_pattern, "")
       end
-
       entries
     end
   end
